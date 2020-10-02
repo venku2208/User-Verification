@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+
+<div class="container">
+<h1>Signin</h1>
+  <form action="signin" method='post'>
+  {% csrf_token %}     
+        <h2>Username:</h2>
+        <input type="text" name="username" placeholder="Username" required>
+        <h2>Password:</h2>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+         {% for message in messages%}
+        {{message}}
+        {% endfor%}
+      </div>
+     
+</div>
+    </div>
+  </form>
+</div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="register" style="color:white" class="btn">Sign up</a>
+    </div>
+  </div>
+</div>
+<div>
+
+
+</body>
+</html>
